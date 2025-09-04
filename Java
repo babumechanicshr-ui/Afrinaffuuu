@@ -1,0 +1,20 @@
+// Script to add fade-in animation on scroll
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".fade-in");
+
+    function checkFadeIn() {
+        const triggerBottom = window.innerHeight * 0.9;
+
+        sections.forEach(section => {
+            const boxTop = section.getBoundingClientRect().top;
+
+            if (boxTop < triggerBottom) {
+                section.classList.add("show");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", checkFadeIn);
+    checkFadeIn(); // Trigger on load
+});
