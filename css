@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3, #a18cd1);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Background Animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  padding: 50px 20px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+/* Skills Section */
+.skill-bar {
+  margin: 20px auto;
+  width: 70%;
+  text-align: left;
+}
+
+.skill-bar p {
+  margin: 0 0 5px;
+}
+
+.progress {
+  height: 12px;
+  border-radius: 6px;
+  background: #222;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 6px;
+  animation: loadSkill 3s forwards;
+}
+
+.progress.html::after {
+  width: 90%;
+  background: #ffdd57;
+}
+
+.progress.css::after {
+  width: 80%;
+  background: #57d3ff;
+}
+
+.progress.js::after {
+  width: 70%;
+  background: #ff9f57;
+}
+
+@keyframes loadSkill {
+  from { width: 0; }
+}
+
+/* Projects */
+.project {
+  background: rgba(0,0,0,0.3);
+  margin: 20px auto;
+  padding: 20px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+/* Contact */
+#contact a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+}
