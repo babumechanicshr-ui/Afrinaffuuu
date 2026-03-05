@@ -1,0 +1,95 @@
+/* Page Background */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4e73df, #1cc88a);
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0;
+    color: #4e73df;
+}
+
+/* Section Headings */
+h2 {
+    color: #1cc88a;
+    border-bottom: 2px solid #4e73df;
+    padding-bottom: 5px;
+}
+
+/* Paragraph Styling */
+p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Radio & Checkbox spacing */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Buttons */
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+/* Button Hover Effect */
+input[type="submit"]:hover {
+    background-color: #2e59d9;
+}
+
+input[type="reset"]:hover {
+    background-color: #e74a3b;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Horizontal Line */
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
