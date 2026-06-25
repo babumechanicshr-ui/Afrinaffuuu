@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HR Management System</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f4f4f4;
+    padding:20px;
+}
+.container{
+    max-width:1000px;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:10px;
+}
+h1,h2{
+    text-align:center;
+    color:#333;
+}
+input,select,button{
+    padding:10px;
+    margin:5px;
+}
+button{
+    background:#007bff;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{
+    background:#0056b3;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+table,th,td{
+    border:1px solid #ccc;
+}
+th{
+    background:#007bff;
+    color:white;
+}
+th,td{
+    padding:10px;
+    text-align:center;
+}
+.section{
+    margin-bottom:30px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>HR Employee Management System</h1>
+
+<!-- Employee Management -->
+<div class="section">
+<h2>Employee Management</h2>
+
+<input type="text" id="empName" placeholder="Employee Name">
+<input type="text" id="empDept" placeholder="Department">
+
+<button onclick="addEmployee()">Add Employee</button>
+
+<table id="employeeTable">
+<tr>
+<th>Name</th>
+<th>Department</th>
+</tr>
+</table>
+</div>
+
+<!-- Leave Management -->
+<div class="section">
+<h2>Leave Management</h2>
+
+<input type="text" id="leaveEmp" placeholder="Employee Name">
+
+<select id="leaveType">
+<option>Sick Leave</option>
+<option>Casual Leave</option>
+<option>Emergency Leave</option>
+<option>Vacation Leave</option>
+</select>
+
+<button onclick="applyLeave()">Apply Leave</button>
+
+<table id="leaveTable">
+<tr>
+<th>Employee</th>
+<th>Leave Type</th>
+<th>Status</th>
+</tr>
+</table>
+</div>
+
+<!-- Attendance Management -->
+<div class="section">
+<h2>Attendance Management</h2>
+
+<input type="text" id="attEmp" placeholder="Employee Name">
+
+<select id="attendanceStatus">
+<option>Present</option>
+<option>Absent</option>
+</select>
+
+<button onclick="markAttendance()">Mark Attendance</button>
+
+<table id="attendanceTable">
+<tr>
+<th>Employee</th>
+<th>Status</th>
+</tr>
+</table>
+</div>
+
+</div>
+
+<script>
+
+// Employee Management
+function addEmployee(){
+
+let name=document.getElementById("empName").value;
+let dept=document.getElementById("empDept").value;
+
+if(name==="" || dept===""){
+alert("Enter Employee Details");
+return;
+}
+
+let table=document.getElementById("employeeTable");
+
+let row=table.insertRow();
+
+row.insertCell(0).innerHTML=name;
+row.insertCell(1).innerHTML=dept;
+
+document.getElementById("empName").value="";
+document.getElementById("empDept").value="";
+}
+
+// Leave Management
+function applyLeave(){
+
+let emp=document.getElementById("leaveEmp").value;
+let leave=document.getElementById("leaveType").value;
+
+if(emp===""){
+alert("Enter Employee Name");
+return;
+}
+
+let table=document.getElementById("leaveTable");
+
+let row=table.insertRow();
+
+row.insertCell(0).innerHTML=emp;
+row.insertCell(1).innerHTML=leave;
+row.insertCell(2).innerHTML="Pending";
+
+document.getElementById("leaveEmp").value="";
+}
+
+// Attendance Management
+function markAttendance(){
+
+let emp=document.getElementById("attEmp").value;
+let status=document.getElementById("attendanceStatus").value;
+
+if(emp===""){
+alert("Enter Employee Name");
+return;
+}
+
+let table=document.getElementById("attendanceTable");
+
+let row=table.insertRow();
+
+row.insertCell(0).innerHTML=emp;
+row.insertCell(1).innerHTML=status;
+
+document.getElementById("attEmp").value="";
+}
+
+</script>
+
+</body>
+</html>
